@@ -1,6 +1,16 @@
-import React from 'react';
+import {useState} from 'react';
 
 const MisterGifApp = () => {
+
+    const [categories, setCategories] = useState(["Mr. Robot", "Red Dead Redemption 2"]);
+
+    const onAddCategory = () => {
+        setCategories(() => {
+            return ["Warzone 2", ...categories];
+        });
+    };
+
+
   return (
     <>
         {/* Title */}
@@ -9,6 +19,18 @@ const MisterGifApp = () => {
         {/* Input */}
 
         {/* GIF list */}
+        <button onClick={onAddCategory}>Agregar</button>
+        <ol>
+            {
+                categories.map((category) => {
+                    return (
+                    <li key={category}>
+                        {category}
+                    </li>
+                    );
+                })
+            }
+        </ol>
             {/* GIF Items */}
 
     </>
