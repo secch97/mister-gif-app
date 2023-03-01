@@ -1,13 +1,12 @@
 import {useState} from 'react';
+import { AddCategory } from './components/AddCategory';
 
 const MisterGifApp = () => {
 
     const [categories, setCategories] = useState(["Mr. Robot", "Red Dead Redemption 2"]);
 
-    const onAddCategory = () => {
-        setCategories(() => {
-            return ["Warzone 2", ...categories];
-        });
+    const onAddCategory = (newCategory) => {
+        setCategories([newCategory, ...categories.filter((category) => category!==newCategory)]);
     };
 
 
@@ -17,12 +16,12 @@ const MisterGifApp = () => {
         <h1>Mister GIF</h1>
         
         {/* Input */}
+        <AddCategory onAddCategory={onAddCategory}></AddCategory>
 
         {/* GIF list */}
-        <button onClick={onAddCategory}>Agregar</button>
         <ol>
             {
-                categories.map((category) => {
+                categories.map((category, i) => {
                     return (
                     <li key={category}>
                         {category}
