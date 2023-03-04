@@ -1,36 +1,33 @@
 import {useState} from 'react';
 import { AddCategory } from './components/AddCategory';
+import { GifGrid } from './components/GifGrid';
 
 const MisterGifApp = () => {
 
-    const [categories, setCategories] = useState(["Mr. Robot", "Red Dead Redemption 2"]);
+    const [categories, setCategories] = useState(["Mr. Robot"]);
 
     const onAddCategory = (newCategory) => {
-        setCategories([newCategory, ...categories.filter((category) => category!==newCategory)]);
+        setCategories([newCategory, ...categories.filter((category) => category.toLowerCase()!==newCategory.toLowerCase())]);
     };
 
 
   return (
     <>
-        {/* Title */}
         <h1>Mister GIF</h1>
         
-        {/* Input */}
+
         <AddCategory onAddCategory={onAddCategory}></AddCategory>
 
-        {/* GIF list */}
-        <ol>
-            {
-                categories.map((category, i) => {
-                    return (
-                    <li key={category}>
-                        {category}
-                    </li>
-                    );
-                })
-            }
-        </ol>
-            {/* GIF Items */}
+        {
+            categories.map((category) => 
+                (
+                    <GifGrid 
+                        key={`${category}`}
+                        category={category}
+                    />
+                )
+            )
+        }
 
     </>
   );
