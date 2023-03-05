@@ -4,5 +4,7 @@ import { MisterGifApp } from './MisterGifApp';
 import "./styles.css";
 
 ReactDOM.createRoot(document.getElementById('root')).render(
-    <MisterGifApp />
+    <React.StrictMode>
+        <MisterGifApp />
+    </React.StrictMode>
 );
