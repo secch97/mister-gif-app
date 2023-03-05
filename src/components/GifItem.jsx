@@ -1,8 +1,12 @@
 import React from 'react';
 
-const GifItem = () => {
+const GifItem = ({category, title, url}) => {
+    console.log(title, url);
   return (
-    <div>GifItem</div>
+    <div className='card'>
+        <img src={url} alt={title}/>
+        <p>{title.trim() ? title:`${category} GIF`}</p>
+    </div>
   )
 };
 
