@@ -1,6 +1,9 @@
 const getGifs = async(category) => {
     const url = `https://api.giphy.com/v1/gifs/search?api_key=FWCszwwyG9YJM5R3VACQkGLUQBl2M7Qe&q=${category}&limit=10`;
-    const response = await fetch(url);
+    const response = await fetch(url, {
+        method: "GET",
+        mode: "cors"
+    });
     const {data} = await response.json();
     const gifs = data.map((gif) => {
         return {
