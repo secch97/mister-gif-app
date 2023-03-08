@@ -11,7 +11,7 @@ const GifGrid = ({category, firstPosition}) => {
     console.log(category);
     return (
         <>
-            <div className="card-grid-container">
+            <div className={firstPosition ? 'card-grid-container animate__animated animate__fadeInDown' : 'card-grid-container'}>
                 <h3>{category}</h3> 
                 {
                     isLoading ? (<h2>Loading...</h2>) : null
@@ -23,7 +23,6 @@ const GifGrid = ({category, firstPosition}) => {
                                 <GifItem
                                     key={gif.id}
                                     category={category}
-                                    firstPosition={firstPosition}
                                     {...gif}
                                 />
                             );
