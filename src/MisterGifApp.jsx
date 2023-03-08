@@ -18,14 +18,15 @@ const MisterGifApp = () => {
         <AddCategory onAddCategory={onAddCategory}></AddCategory>
 
         {
-            categories.map((category) => 
-                (
+            categories.map((category, i) => {
+                return (
                     <GifGrid 
                         key={`${category}`}
                         category={category}
+                        firstPosition={!i ? true:false}
                     />
-                )
-            )
+                );
+                })
         }
 
     </>

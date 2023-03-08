@@ -3,32 +3,34 @@ import { useFetchGifs } from "../hooks/useFetchGifs";
 
 
 
-const GifGrid = ({category}) => {
+const GifGrid = ({category, firstPosition}) => {
 
     const {gifs, isLoading} = useFetchGifs(category);
-    console.log(gifs, isLoading);
     /*
-    
 ``  */
+    console.log(category);
     return (
         <>
-            <h3>{category}</h3> 
-            {
-                isLoading ? (<h2>Loading...</h2>) : null
-            }
-            <div className="card-grid">
+            <div className="card-grid-container">
+                <h3>{category}</h3> 
                 {
-                    gifs.map((gif) => {
-                        return (
-                            <GifItem
-                                key={gif.id}
-                                category={category}
-                                {...gif}
-                            />
-                        );
-                    })
+                    isLoading ? (<h2>Loading...</h2>) : null
                 }
-            </div>
+                <div className="card-grid">
+                    {
+                        gifs.map((gif) => {
+                            return (
+                                <GifItem
+                                    key={gif.id}
+                                    category={category}
+                                    firstPosition={firstPosition}
+                                    {...gif}
+                                />
+                            );
+                        })
+                    }
+                </div>
+            </div>    
         </>
     );
 };

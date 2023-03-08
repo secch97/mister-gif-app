@@ -1,8 +1,9 @@
 import React from 'react';
 
-const GifItem = ({category, title, url}) => {
+const GifItem = ({category, firstPosition, title, url}) => {
   return (
-    <div className='card'>
+
+    <div className={firstPosition ? 'card animate__animated animate__fadeInDown' : 'card'}>
         <img src={url} alt={title}/>
         <span>{title.trim() ? title:`${category} GIF`}</span>
     </div>

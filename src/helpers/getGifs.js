@@ -5,7 +5,6 @@ const getGifs = async(category) => {
         mode: "cors"
     });
     const {data} = await response.json();
-    console.log(data);
 
     const gifs = data.map((gif) => {
         return {
