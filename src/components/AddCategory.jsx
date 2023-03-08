@@ -22,7 +22,7 @@ const AddCategory = ({onAddCategory}) => {
         <form onSubmit={onFormSubmit}>
             <input 
                 type="text"
-                placeholder="Search GIFs" 
+                placeholder="Search GIFs by category" 
                 value={inputValue}
                 onChange={onInputChange}
             />

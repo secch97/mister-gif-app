@@ -8,11 +8,11 @@ const GifGrid = ({category, firstPosition}) => {
     const {gifs, isLoading} = useFetchGifs(category);
     /*
 ``  */
-    console.log(category);
+
     return (
         <>
             <div className={firstPosition ? 'card-grid-container animate__animated animate__fadeInDown' : 'card-grid-container'}>
-                <h3>{category}</h3> 
+                <h1>{category}</h1> 
                 {
                     isLoading ? (<h2>Loading...</h2>) : null
                 }
