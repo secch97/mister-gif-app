@@ -96,19 +96,25 @@
     align-items: center;
     flex-direction: column;
     flex: 1 1 auto;
-
     /*Sizing*/
     width: 100%;
-    height: auto;
+    height: auto;    
+    /* Position */
+    position: sticky;
+    top: 0px;
+    z-index: 1;
   }
 
   .nav-bar{
+    /* Overflow */
+    overflow: hidden;
     /*Spacing*/
     margin-top: 0px;
     padding: 10px;
     /*Sizing*/
     width: 100%;
     height: auto;
+
     /*Colors*/
     background-color: #16213E;
   }
@@ -165,12 +171,16 @@
     height: 250px;  
 
     margin-bottom: 30px;
-    margin-right: 40px;
+    margin-left: 30px;
+    margin-right: 30px;
     overflow: hidden;
 
     position: relative;
     transition: all 0.15s ease-in-out;
+
+    cursor: pointer;
   }
+
   
   .card span {
     display: flex;

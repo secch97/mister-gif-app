@@ -16,6 +16,7 @@ const AddCategory = ({onAddCategory}) => {
         }
         onAddCategory(newCategory);
         setInputValue("");
+        window.scrollTo({ top: 0, behavior: 'smooth' });
     };
 
     return (
