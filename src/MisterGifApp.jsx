@@ -1,6 +1,7 @@
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { NavigationBar, GifGrid } from './components/';
+
 import {useState} from 'react';
-import { AddCategory, GifGrid } from './components/';
-import { NavigationBar } from './components/NavigationBar';
 
 
 const MisterGifApp = () => {
@@ -11,6 +12,10 @@ const MisterGifApp = () => {
     const onAddCategory = (newCategory) => {
         setCategories([newCategory, ...categories.filter((category) => category.toLowerCase()!==newCategory.toLowerCase())]);
     };
+
+    const scrollToTop = () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
 
     return (
         <>
@@ -26,6 +31,12 @@ const MisterGifApp = () => {
                     );
                     })
             }
+            <a className='button-top' onClick={scrollToTop}>
+                <FontAwesomeIcon 
+                icon={["fas", "circle-up"]} 
+                size="4x"
+                />
+            </a>
         </>
   );
 };
