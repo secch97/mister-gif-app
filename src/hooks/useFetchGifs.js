@@ -8,9 +8,8 @@ export const useFetchGifs = (category) => {
     
     const getGifsData = async () => {
         const gifsData = await getGifs(category);
-        setGifs(gifsData);
+        setGifs(gifsData.length ? gifsData : `No GIFs found for ${category}`);
         setIsLoading(false);
-        console.log("fetch");
     };  
 
     //useEffect hook

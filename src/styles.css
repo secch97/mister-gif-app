@@ -78,6 +78,21 @@
     /*Color*/
     color: white;
   }
+
+  h2 {
+    /* Font style */
+    font-weight: 300;
+    font-style: normal;
+    font-size: 2rem;
+
+    /* Spacing */
+    margin-bottom: 5px;
+
+    /*Color*/
+    color: white;
+  }
+
+
   
   #root{
     display:flex;
@@ -159,7 +174,8 @@
     justify-content: center;
   }
   
-  .card-grid {
+  .card-grid,
+  .not-found {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -219,6 +235,22 @@
     color: white;
     text-shadow: 2px 2px #E94560;
   }
+
+  .not-found,
+  .not-found *{
+    /* Display */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* Spacing */
+    margin-top: 10px;
+    /* Colors */
+    color:white;
+    animation-duration: 2s;
+  }
+
+
 
   .button-top{
     /* Position */

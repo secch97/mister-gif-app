@@ -7,7 +7,6 @@ import {useState} from 'react';
 const MisterGifApp = () => {
 
     const [categories, setCategories] = useState(["Trending"]);
-    const [scroll, setScroll] = useState(0);
 
     const onAddCategory = (newCategory) => {
         setCategories([newCategory, ...categories.filter((category) => category.toLowerCase()!==newCategory.toLowerCase())]);
