@@ -1,9 +1,5 @@
 import { GifItem, GifNotFound } from "./";
 import { useFetchGifs } from "../hooks/useFetchGifs";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
-
-
 
 const GifGrid = ({category, firstPosition}) => {
 
