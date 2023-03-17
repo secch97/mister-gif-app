@@ -1,8 +1,13 @@
+/* Helpers */
+import { scrollToTop } from "../helpers/scrollToTop";
+/* Hooks */
 import {useState} from "react";
 
 const AddCategory = ({onAddCategory}) => {
+    // Hooks
     const [inputValue, setInputValue] = useState("");
 
+    // Element handlers
     const onInputChange = (event) => {
         let newInputValue = event.target.value;
         setInputValue(newInputValue);
@@ -16,7 +21,7 @@ const AddCategory = ({onAddCategory}) => {
         }
         onAddCategory(newCategory);
         setInputValue("");
-        window.scrollTo({ top: 0, behavior: 'smooth' });
+        scrollToTop();
     };
 
     return (

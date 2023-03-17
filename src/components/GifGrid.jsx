@@ -1,9 +1,13 @@
+/* Components */
 import { GifItem, GifNotFound } from "./";
+/* Hooks */
 import { useFetchGifs } from "../hooks/useFetchGifs";
 
 const GifGrid = ({category, firstPosition}) => {
-
+    /* Custom hook */
     const {gifs, isLoading} = useFetchGifs(category);
+    
+    /* App rendering */
     let gifGridRendered;
     if (typeof gifs === "object") {
         gifGridRendered = (

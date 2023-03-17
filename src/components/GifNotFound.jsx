@@ -1,5 +1,6 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
+/* Libraries */
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const GifNotFound = ({message}) => {
   return (

@@ -1,6 +1,7 @@
+import React from 'react';
+/* Libraries */
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { toast } from 'react-toastify';
-import React from 'react';
 
 const GifItem = ({category, title, url}) => {
   const copyUrl = () => {
