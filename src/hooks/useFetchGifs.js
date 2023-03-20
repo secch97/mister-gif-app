@@ -5,10 +5,10 @@ export const useFetchGifs = (category) => {
 
     const [gifs, setGifs] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
-
+    
     const getGifsData = async () => {
         const gifsData = await getGifs(category);
-        setGifs(gifsData);
+        setGifs(gifsData.length ? gifsData : `No GIFs found for ${category}`);
         setIsLoading(false);
     };  
 
