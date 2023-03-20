@@ -32,6 +32,11 @@ const AddCategory = ({onAddCategory}) => {
                 value={inputValue}
                 onChange={onInputChange}
             />
+            <button 
+                type="submit"
+            > 
+                Search 
+            </button>
         </form>
     );
 };

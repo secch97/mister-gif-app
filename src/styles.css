@@ -44,10 +44,11 @@
   form {
     /* Display */
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     flex: 1 1 auto;
     justify-content: center;
     align-items: center;
+    gap: 5px;
     /* Sizing */
     width: 100%;
   }
@@ -56,13 +57,12 @@
     /* Clean system syle */
     all: unset;
     /* Sizing */
-    width: 100%;
-    min-width: 100%;
+    width: 90%;
+    min-width: 90%;
     /* Spacing */
     padding: 10px 15px;
     border: 3px solid #16213E;
     border-radius: 5px;
-    margin: auto;
     /* Color */
     background-color: white;
     color: black;
@@ -72,6 +72,46 @@
     text-transform: capitalize;
     /* Animation */    
     transition: ease-in-out 0.5s;
+  }
+
+  button {
+    /* Default still */
+    all: unset;
+    /* Spacing */
+    padding: 10px 15px;
+    border: 3px solid #16213E;
+    border-radius: 5px;
+
+    /* Color */
+    background-color: white;
+    /* Font */
+    font-size: 1.2rem;
+    /* Animation */
+    transition: ease-in-out 0.3s;
+  }
+
+  button:hover{
+    /* Cursor */
+    cursor: pointer;
+    /* Animation */
+    transform: scale(1.05);
+    transition: ease-in-out 0.3s;
+    /* Color */
+    background-color: #E94560;
+    color: white;
+  }
+
+  button:focus{
+    /* Spacing */
+    border: 3px solid #E94560;
+    /* Animation */
+    transition: ease-in-out 0.3s;
+  }
+
+  button:active{
+    /* Animation */
+    transform: scale(0.95);
+    transition: ease-in-out 0.3s;
   }
 
   input:active{
