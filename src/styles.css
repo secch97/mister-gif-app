@@ -71,7 +71,8 @@
     /* Text style */
     text-transform: capitalize;
     /* Animation */    
-    transition: ease-in-out 0.5s;
+    transition: all ease-in-out 0.5s;
+    transition: font-size 0.3s ease-in-out;
   }
 
   button {
@@ -88,6 +89,7 @@
     font-size: 1.2rem;
     /* Animation */
     transition: ease-in-out 0.3s;
+    transition: font-size 0.3s ease-in-out;
   }
 
   button:hover{
@@ -196,6 +198,8 @@
     min-width: 100%;
     height: auto;   
     min-height: 152px;
+    /* Animation */
+    transition: 0.5s all ease-in-out;
   }
 
   .nav-bar{
@@ -204,11 +208,13 @@
     /* Position */
     position: fixed;
     top: 0px;
+    left: 0px;
     z-index: 1;
     /* Display */
     display: flex;
     flex-direction: column;
     align-items: center;
+    flex: auto;
     /*Spacing*/
     margin-top: 0px;
     padding: 10px;
@@ -230,6 +236,8 @@
     padding-bottom: 5px;
     width: 80%;
     min-width: 80%;
+    /* Animation */
+    transition: all 0.5s ease-in-out;    
   }
 
   .nav-bar-logo-link,
@@ -290,6 +298,7 @@
     background-color: white;
     /* Animation */
     transition: all 0.15s ease-in-out;
+    transition: width 0.5s ease-in-out, height 0.5s ease-in-out;
     cursor: pointer;
   }
 
@@ -466,4 +475,57 @@
     /*Animation*/
     transform: scale(1.05);
     transition: 0.2s ease-in-out;
+  }
+
+  @media (max-width: 1280px){
+    .nav-bar-logo-container{
+      /* Display */
+      justify-content: center;
+
+    }
+  }
+
+  @media (max-width: 440px){
+    form{
+      /* Display */
+      flex-direction: column;
+    }
+
+    .nav-bar-container{
+      /* Display */
+      width: 100%;
+      min-height: 206px;
+      /* Animation */
+      transition: 0.5s all ease-in-out;
+    }
+
+    .card {
+      /*Sizing*/
+      width: 300px;
+      height: 170px;  
+      /* Animation */
+      transition: width 0.5s ease-in-out, height 0.5s ease-in-out;
+    }
+  }
+
+  @media (max-width: 375px){
+    input {
+      font-size: 1.0rem;
+      /* Animation */
+      transition: font-size 0.3s ease-in-out;
+    }
+
+    button {
+      font-size: 1.0rem;
+      /* Animation */
+      transition: font-size 0.3s ease-in-out;
+    }
+
+    .card {
+      /*Sizing*/
+      width: 220px;
+      height: 170px;  
+      /* Animation */
+      transition: width 0.5s ease-in-out, height 0.5s ease-in-out;
+    }
   }
