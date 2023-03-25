@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 /* Libraries */
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { toast } from 'react-toastify';
@@ -30,3 +31,14 @@ const GifItem = ({category, title, url}) => {
 export {
     GifItem
 }
+
+/*
+  ===========================
+  =       PROPTYPES         =
+  ===========================
+*/
+GifItem.propTypes = {
+  title: PropTypes.string.isRequired,
+  url: PropTypes.string.isRequired,
+  category: PropTypes.string.isRequired
+};
