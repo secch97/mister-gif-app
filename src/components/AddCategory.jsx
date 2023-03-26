@@ -2,6 +2,8 @@
 import { scrollToTop } from "../helpers/scrollToTop";
 /* Hooks */
 import {useState} from "react";
+/* Proptypes*/
+import PropTypes from 'prop-types';
 
 const AddCategory = ({onAddCategory}) => {
     // Hooks
@@ -42,3 +44,7 @@ const AddCategory = ({onAddCategory}) => {
 };
 
 export { AddCategory };
+
+AddCategory.propTypes = {
+    onAddCategory: PropTypes.func.isRequired
+};
