@@ -2,6 +2,8 @@
 import { GifItem, GifNotFound } from "./";
 /* Hooks */
 import { useFetchGifs } from "../hooks/useFetchGifs";
+/* Prop types */
+import PropTypes from "prop-types";
 
 const GifGrid = ({category, firstPosition}) => {
     /* Custom hook */
@@ -49,3 +51,8 @@ const GifGrid = ({category, firstPosition}) => {
 };
 
 export { GifGrid };
+
+GifGrid.propTypes = {
+    category: PropTypes.string.isRequired,
+    firstPosition: PropTypes.bool.isRequired
+};
